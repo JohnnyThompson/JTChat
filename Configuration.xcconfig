@@ -1,0 +1,15 @@
+//
+//  Configuration.xcconfig
+//  JTChat
+//
+//  Created by Evgeny on 25.05.2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+HTTPS_PROTOCOL = https:/
+IMAGES_API_KEY = 26831316-69f0acebf21c0bddbdf844e44
+IMAGES_API_COUNT = per_page=200
+IMAGES_API = $(HTTPS_PROTOCOL)/pixabay.com/api/?key=$(IMAGES_API_KEY)&$(IMAGES_API_COUNT)
+FIREBASE_API_KEY = AIzaSyDiP82T7uEDYP3Mz4oUv2roP8wEJsV418k

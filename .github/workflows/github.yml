@@ -1,0 +1,19 @@
+name: CI
+on: [push]
+jobs:
+    build:
+        runs-on: macos-latest
+        steps:
+        - uses: actions/checkout@v3
+        
+        - name: Bundle update
+          run:
+            bundle update fastlane
+        
+        - name: Bundle dependencies
+          run:
+            bundle install
+        
+        - name: Build and test
+          run:
+            bundle exec fastlane build_and_test

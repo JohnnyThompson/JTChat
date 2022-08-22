@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DBChannel" representedClassName="DBChannel" syncable="YES" codeGenerationType="class">
+        <attribute name="identifier" attributeType="String"/>
+        <attribute name="lastActivity" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastMessage" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DBMessage" inverseName="channel" inverseEntity="DBMessage"/>
+    </entity>
+    <entity name="DBMessage" representedClassName="DBMessage" syncable="YES" codeGenerationType="class">
+        <attribute name="channelID" optional="YES" attributeType="String"/>
+        <attribute name="content" attributeType="String"/>
+        <attribute name="created" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="identifier" optional="YES" attributeType="String"/>
+        <attribute name="senderId" attributeType="String"/>
+        <attribute name="senderName" attributeType="String"/>
+        <relationship name="channel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBChannel" inverseName="messages" inverseEntity="DBChannel"/>
+    </entity>
+    <entity name="DBPerson" representedClassName="DBPerson" syncable="YES" codeGenerationType="class">
+        <attribute name="aboutMe" attributeType="String"/>
+        <attribute name="fullName" attributeType="String"/>
+        <attribute name="location" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="DBChannel" positionX="-374.05078125" positionY="-19.92578125" width="128" height="103"/>
+        <element name="DBMessage" positionX="-45.265625" positionY="-20.01953125" width="128" height="134"/>
+        <element name="DBPerson" positionX="-231.75390625" positionY="-208.29296875" width="128" height="74"/>
+    </elements>
+</model>

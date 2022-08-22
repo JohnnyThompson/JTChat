@@ -1,0 +1,35 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+
+desc "Build for testing only, does not run tests. Project be cleaned before building!"
+  lane :build_for_testing do
+    scan(
+      build_for_testing: true,
+      clean: true
+    )
+    puts "build_for_testing COMPLETE!"
+end
+
+desc "Run test without cleaning project."
+  lane :custom_run_tests do 
+    run_tests
+    puts "custom_run_tests COMPLETE!"
+end
+
+desc "Build and run test."
+  lane :build_and_test do
+    build_for_testing
+    custom_run_tests
+    puts "build_and_test COMPLETE!"
+end
+

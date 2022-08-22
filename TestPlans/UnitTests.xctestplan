@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "0325C023-1769-4481-853A-4064F490D872",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:JTChat.xcodeproj",
+        "identifier" : "5C463E2B28353EC900CC8C25",
+        "name" : "JTChatTests"
+      }
+    }
+  ],
+  "version" : 1
+}
