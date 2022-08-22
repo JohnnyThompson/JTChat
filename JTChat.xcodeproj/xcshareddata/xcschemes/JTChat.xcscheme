@@ -40,14 +40,14 @@
       </CodeCoverageTargets>
       <TestPlans>
          <TestPlanReference
-            reference = "container:TestPlans/UnitTests.xctestplan">
+            reference = "container:TestPlans/UnitTests.xctestplan"
+            default = "YES">
          </TestPlanReference>
          <TestPlanReference
             reference = "container:TestPlans/UITests.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:TestPlans/AllTests.xctestplan"
-            default = "YES">
+            reference = "container:TestPlans/AllTests.xctestplan">
          </TestPlanReference>
       </TestPlans>
       <Testables>
