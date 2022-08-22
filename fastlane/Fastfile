@@ -21,8 +21,10 @@ desc "Build for testing only, does not run tests. Project be cleaned before buil
 end
 
 desc "Run test without cleaning project."
-  lane :custom_run_tests do 
-    run_tests
+  lane :custom_run_tests do
+    run_tests(
+        devices: ["iPhone 12 mini"]
+    ) 
     puts "custom_run_tests COMPLETE!"
 end
 
