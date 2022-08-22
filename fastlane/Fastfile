@@ -23,8 +23,8 @@ end
 desc "Run test without cleaning project."
   lane :custom_run_tests do
     run_tests(
-        devices: ["iPhone 12 mini"]
-    ) 
+        scheme: "UnitTests"
+    )
     puts "custom_run_tests COMPLETE!"
 end
 
